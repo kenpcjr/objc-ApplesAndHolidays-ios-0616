@@ -19,14 +19,6 @@
 
 -(NSArray *)holidaysInSeason:(NSString *)season inDatabase:(NSDictionary *)database {
     NSArray *holidays = [database[season]allKeys];
-    /*NSPredicate *predHolidays = [NSPredicate predicateWithFormat:@"self contains 'Day'"];
-    NSArray *filteredHolidays = [holidays filteredArrayUsingPredicate:predHolidays];
-    
-    
-    
-    NSArray *databaseKeys = [database allKeys];
-    NSLog(@"%@",databaseKeys);
-    NSArray *holidays = [databaseKeys filteredArrayUsingPredicate:predHolidays];*/
     NSLog(@"%@",holidays);
     return holidays;
 }
