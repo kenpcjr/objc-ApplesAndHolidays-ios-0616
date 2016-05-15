@@ -46,7 +46,11 @@
 }
 
 -(BOOL)supply:(NSString *)supply isInHoliday:(NSString *)holiday inSeason:(NSString *)season inDatabase:(NSDictionary *)database {
-    return nil;
+    BOOL supplyIndicator = NO;
+    if ([database[season][holiday]containsObject:supply]) {
+        supplyIndicator = YES;
+    }
+    return supplyIndicator;
 }
 
 -(NSDictionary *)addHoliday:(NSString *)holiday toSeason:(NSString *)season inDatabase:(NSDictionary *)database {
